@@ -17,4 +17,34 @@
         android:label="Browser"
         tools:layout="@layout/fragment_browser" />
 
+    <fragment
+        android:id="@+id/magnetic"
+        android:name="ru.mirea.malyushin.mireaproj.ui.magnetic.MagneticField"
+        android:label="Magnetic"
+        tools:layout="@layout/fragment_magnetic_field"/>
+
+    <fragment
+        android:id="@+id/camera"
+        android:name="ru.mirea.malyushin.mireaproj.ui.CameraFragment"
+        android:label="Camera"
+        tools:layout="@layout/fragment_camera"/>
+
+    <fragment
+        android:id="@+id/audio"
+        android:name="ru.mirea.malyushin.mireaproj.ui.audio.AudioFragment"
+        android:label="Audio"
+        tools:layout="@layout/fragment_audio"/>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="ru.mirea.malyushin.mireaproj.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+
+    <fragment
+        android:id="@+id/fileworker"
+        android:name="ru.mirea.malyushin.mireaproj.ui.filework.FileWorkFragment"
+        android:label="FileWorker"
+        tools:layout="@layout/fragment_file_work"/>
+
 </navigation>

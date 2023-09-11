@@ -1,13 +1,17 @@
 package ru.mirea.malyushin.mireaproj.ui.fashion;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.WorkerThread;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -17,13 +21,27 @@ public class FashionFragment extends Fragment {
 
     private FragmentFashionBinding binding;
 
+    private Handler handler = new Handler(new Handler.Callback() {
+        @Override
+        public boolean handleMessage(@NonNull Message message) {
+                String currentTime = (String) message.obj;
+                binding.time.setText(currentTime);
+                return true;
+        }
+    });
+
     @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        TimeWorker timeWorker = new TimeWorker(handler);
+        timeWorker.start();
+
         FashionViewModel fashionViewModel = new ViewModelProvider(this).get(FashionViewModel.class);
 
         binding = FragmentFashionBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
 
         final TextView textView = binding.text1;
         final TextView textView2 = binding.text2;

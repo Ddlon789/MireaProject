@@ -12,5 +12,20 @@
             android:id="@+id/browser"
             android:icon="?android:attr/actionModeWebSearchDrawable"
             android:title="Browser" />
+        <item
+            android:id="@+id/magnetic"
+            android:title="Magnetic"/>
+        <item
+            android:id="@+id/camera"
+            android:title="Camera"/>
+        <item
+            android:id="@+id/audio"
+            android:title="Audio"/>
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/fileworker"
+            android:title="File Worker"/>
     </group>
 </menu>

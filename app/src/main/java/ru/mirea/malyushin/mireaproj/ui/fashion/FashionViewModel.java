@@ -10,7 +10,7 @@ public class FashionViewModel extends ViewModel {
 
     public FashionViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is fashion fragment");
     }
 
     public LiveData<String> getText() {
